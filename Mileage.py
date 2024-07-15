@@ -21,7 +21,7 @@ min_max_values = {
 }
 
 # Streamlit app
-st.image(r"innomaticslogo.webp")
+st.image(r"innomaticslogo.png")
 st.title('Car Mileage Prediction')
 
 # Load the trained model
