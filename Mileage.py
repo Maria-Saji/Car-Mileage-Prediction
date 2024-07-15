@@ -5,8 +5,9 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error,r2_score
 
+
 # Finding the min and max values from the Dataset
-df=pd.read_excel(r"C:\Users\SK\Downloads\mtcars.xlsx")
+df=pd.read_excel(r"mtcars.xlsx")
 
 min_max_values = {
     'cyl': (df['cyl'].min(), df['cyl'].max()),
@@ -20,11 +21,11 @@ min_max_values = {
 }
 
 # Streamlit app
-st.image(r"C:\Users\SK\Downloads\innomaticslogo.webp")
+st.image(r"innomaticslogo.webp")
 st.title('Car Mileage Prediction')
 
 # Load the trained model
-model = pickle.load(open(r"C:\Users\SK\Machine Learning\car.pkl", "rb"))
+model = pickle.load(open(r"car.pkl", "rb"))
 
 #Inputs
 Cycle=st.number_input("Enter Number of Cylinders required ",min_value=min_max_values['cyl'][0],max_value=min_max_values['cyl'][1],step=1)
